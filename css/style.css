@@ -2320,7 +2320,7 @@ h6 {
 ============================================================================================ */
 .main_btn {
   display: inline-block;
-  background-image: linear-gradient(to right, #222222 0%, #86e8ff 48%, #222222 100%);
+  background-image: linear-gradient(to right, #222222 0%, #868686 48%, #222222 100%);
   background-size: 200% auto;
   padding: 0px 40px;
   color: #fff;
@@ -2451,7 +2451,7 @@ h6 {
   border-radius: 5px; }
   .wel_item i {
     font-size: 24px;
-    background: linear-gradient(to right, #222222 0%, #86e7ff 70%);
+    background: linear-gradient(to right, #222222 0%, #222222 70%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
   .wel_item h4 {
