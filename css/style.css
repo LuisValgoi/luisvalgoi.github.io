@@ -2438,8 +2438,7 @@ h6 {
   color: #222222;
   font-family: "Heebo", sans-serif;
   font-size: 36px;
-  margin-bottom: 18px;
-  text-transform: uppercase; }
+  margin-bottom: 18px; }
 .welcome_text p {
   max-width: 495px;
   font-family: "Roboto", sans-serif;
@@ -2467,37 +2466,40 @@ h6 {
     color: #777777;
     margin-bottom: 0px; }
 
-.tools_expert {
-  padding: 20px 0px 0px 0px; }
-  .tools_expert .skill_main .skill_item {
-    margin-bottom: 18px; }
-    .tools_expert .skill_main .skill_item:last-child {
-      margin-bottom: 0px; }
-    .tools_expert .skill_main .skill_item h4 {
-      text-align: none;
-      font-size: 14px;
-      font-family: "Roboto", sans-serif;
-      font-weight: 500;
-      color: #222222;
-      margin-bottom: 15px; }
-    .tools_expert .skill_main .skill_item .progress_br {
-      border: 1px solid #eeeeee;
-      padding: 5px;
-      border-radius: 10px; }
-    .tools_expert .skill_main .skill_item .progress {
+.tools_expert .skill_main .skill_item {
+  margin-bottom: 18px; }
+  .tools_expert .skill_main .skill_item:last-child {
+    margin-bottom: 0px; }
+  .tools_expert .skill_main .skill_item h4 {
+    text-align: none;
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    color: #222222;
+    margin-bottom: 15px; }
+  .tools_expert .skill_main .skill_item .progress_br {
+    border: 1px solid #eeeeee;
+    padding: 5px;
+    border-radius: 10px; }
+  .tools_expert .skill_main .skill_item .progress {
+    height: 10px;
+    border-radius: 10px;
+    background: #e8e8e8; }
+    .tools_expert .skill_main .skill_item .progress .progress-bar {
+      width: 0%;
+      transition: width .6s ease;
       height: 10px;
-      border-radius: 10px;
-      background: #e8e8e8; }
-      .tools_expert .skill_main .skill_item .progress .progress-bar {
-        width: 0%;
-        transition: width .6s ease;
-        height: 10px;
-        border-radius: 5px;
-        vertical-align: middle;
-        align-self: center;
-        background-image: -moz-linear-gradient(0deg, #222222 0%, #4b4b4d 100%);
-        background-image: -webkit-linear-gradient(0deg, #222222 0%, #4b4b4d 100%);
-        background-image: -ms-linear-gradient(0deg, #222222 0%, #4b4b4d 100%); }
+      border-radius: 5px;
+      vertical-align: middle;
+      align-self: center;
+      background-image: -moz-linear-gradient(0deg, #222222 0%, #4b4b4d 100%);
+      background-image: -webkit-linear-gradient(0deg, #222222 0%, #4b4b4d 100%);
+      background-image: -ms-linear-gradient(0deg, #222222 0%, #4b4b4d 100%); }
+    .tools_expert h4 {
+      color: #222222;
+      font-family: "Heebo", sans-serif;
+      font-size: 36px;
+      margin-bottom: 18px; }
 
 /* End Welcome Area css
 ============================================================================================ */

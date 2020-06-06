@@ -597,6 +597,10 @@ pre code {
     .container {
         max-width: 720px
     }
+
+    .row {
+        margin-bottom: 30px;
+    }
 }
 
 @media (min-width:992px) {
@@ -625,7 +629,7 @@ pre code {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin-right: -15px;
-    margin-left: -15px
+    margin-left: -15px;
 }
 
 .no-gutters {
