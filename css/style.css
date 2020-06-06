@@ -2525,7 +2525,7 @@ h6 {
       font-weight: 500;
       color: #fff;
       font-family: "Roboto", sans-serif;
-      border: 1px solid #9ab5f5;
+      border: 1px solid white;
       background: rgba(255, 255, 255, 0.1); }
       .tabs_inner .nav.nav-tabs li a.active {
         background: #fff;
