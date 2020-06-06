@@ -1358,7 +1358,7 @@ button:focus {
   .element-wrap {
     margin-top: 30px; } }
 b, sup, sub, u, del {
-  color: #f8b600; }
+  color: #919191; }
 
 h1 {
   font-size: 36px; }
@@ -1463,22 +1463,22 @@ h6 {
 
 .genric-btn.primary {
   color: #fff;
-  background: #f8b600;
+  background: #919191;
   border: 1px solid transparent; }
 
 .genric-btn.primary:hover {
-  color: #f8b600;
-  border: 1px solid #f8b600;
+  color: #919191;
+  border: 1px solid #919191;
   background: #fff; }
 
 .genric-btn.primary-border {
-  color: #f8b600;
-  border: 1px solid #f8b600;
+  color: #919191;
+  border: 1px solid #919191;
   background: #fff; }
 
 .genric-btn.primary-border:hover {
   color: #fff;
-  background: #f8b600;
+  background: #919191;
   border: 1px solid transparent; }
 
 .genric-btn.success {
@@ -1592,7 +1592,7 @@ h6 {
 .generic-blockquote {
   padding: 30px 50px 30px 30px;
   background: #fff;
-  border-left: 2px solid #f8b600; }
+  border-left: 2px solid #919191; }
 
 @media (max-width: 991px) {
   .progress-table-wrap {
@@ -1698,7 +1698,7 @@ h6 {
   position: absolute;
   width: 14px;
   height: 14px;
-  border: 3px solid #f8b600;
+  border: 3px solid #919191;
   background: #fff;
   top: 4px;
   left: 0;
@@ -1709,7 +1709,7 @@ h6 {
 
 .ordered-list li {
   list-style-type: decimal-leading-zero;
-  color: #f8b600;
+  color: #919191;
   font-weight: 500;
   line-height: 1.82em !important; }
 
@@ -1720,7 +1720,7 @@ h6 {
 .ordered-list-alpha li {
   margin-left: 30px;
   list-style-type: lower-alpha;
-  color: #f8b600;
+  color: #919191;
   font-weight: 500;
   line-height: 1.82em !important; }
 
@@ -1731,7 +1731,7 @@ h6 {
 .ordered-list-roman li {
   margin-left: 30px;
   list-style-type: lower-roman;
-  color: #f8b600;
+  color: #919191;
   font-weight: 500;
   line-height: 1.82em !important; }
 
@@ -1792,7 +1792,7 @@ h6 {
 
 .single-input-primary:focus {
   outline: none;
-  border: 1px solid #f8b600; }
+  border: 1px solid #919191; }
 
 .single-input-accent {
   display: block;
@@ -1846,7 +1846,7 @@ h6 {
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background: #f8b600;
+  background: #919191;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
@@ -1924,7 +1924,7 @@ h6 {
   left: 19px; }
 
 .primary-switch input:checked + label:before {
-  background: #f8b600; }
+  background: #919191; }
 
 .confirm-switch {
   width: 35px;
@@ -2247,11 +2247,11 @@ h6 {
   padding-left: 20px; }
 
 .default-select .nice-select .list .option.selected {
-  color: #f8b600;
+  color: #919191;
   background: transparent; }
 
 .default-select .nice-select .list .option:hover {
-  color: #f8b600;
+  color: #919191;
   background: transparent; }
 
 .default-select .current {
@@ -2300,11 +2300,11 @@ h6 {
   padding-left: 45px; }
 
 .form-select .nice-select .list .option.selected {
-  color: #f8b600;
+  color: #919191;
   background: transparent; }
 
 .form-select .nice-select .list .option:hover {
-  color: #f8b600;
+  color: #919191;
   background: transparent; }
 
 .form-select .current {
