@@ -2836,7 +2836,8 @@ h6 {
   border: 1px solid #eeeeee;
   border-radius: 10px;
   background: #fff;
-  padding: 40px 28px; }
+  padding: 40px 28px; 
+  margin-bottom: 15px;}
   .testi_item p {
     font-style: italic; }
   .testi_item h4 {
@@ -2844,7 +2845,7 @@ h6 {
     font-size: 18px;
     text-transform: uppercase; }
   .testi_item a {
-    color: #ffc000; }
+    color: black; }
 
 /* End Testimonials Area css
 ============================================================================================ */
