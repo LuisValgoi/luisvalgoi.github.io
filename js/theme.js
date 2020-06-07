@@ -133,7 +133,7 @@
                 items: 3,
                 nav: false,
                 autoplay: true,
-                smartSpeed: 1500,
+                smartSpeed: 2000,
                 dots: true,
                 responsiveClass: true,
                 responsive: {
