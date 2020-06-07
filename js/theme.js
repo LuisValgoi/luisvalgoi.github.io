@@ -117,7 +117,7 @@
                     </div>
                 </div>
             </div>`;
-                $(".gallery_f_inner.row.imageGallery1").html(content);
+                // $(".gallery_f_inner.row.imageGallery1").html(content);
             });
     }
     onLoadRepositories();
