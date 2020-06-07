@@ -1,18 +1,18 @@
-;(function($){
+; (function ($) {
     "use strict"
-	
-	
-	var nav_offset_top = $('header').height() + 50; 
+
+
+    var nav_offset_top = $('header').height() + 50;
     /*-------------------------------------------------------------------------------
 	  Navbar 
 	-------------------------------------------------------------------------------*/
 
-	//* Navbar Fixed  
-    function navbarFixed(){
-        if ( $('.header_area').length ){ 
-            $(window).scroll(function() {
-                var scroll = $(window).scrollTop();   
-                if (scroll >= nav_offset_top ) {
+    //* Navbar Fixed  
+    function navbarFixed() {
+        if ($('.header_area').length) {
+            $(window).scroll(function () {
+                var scroll = $(window).scrollTop();
+                if (scroll >= nav_offset_top) {
                     $(".header_area").addClass("navbar_fixed");
                 } else {
                     $(".header_area").removeClass("navbar_fixed");
@@ -21,132 +21,67 @@
         };
     };
     navbarFixed();
-	
-	
-	/*----------------------------------------------------*/
+
+
+    /*----------------------------------------------------*/
     /*  Parallax Effect js
     /*----------------------------------------------------*/
-	function parallaxEffect() {
-    	$('.bg-parallax').parallax();
-	}
-	parallaxEffect();
-	
-	
-//	$('.courses_area').imagesLoaded(function(){
-//        $('.courses_inner').isotope({ 
-//            layoutMode: 'masonry',
-//			percentPosition: true,
-//			masonry: {
-//				columnWidth: 1,
-//			}
-//        })
-//    });
-	
-	
-	
-	
-	/*----------------------------------------------------*/
-    /*  portfolio_isotope
+    function parallaxEffect() {
+        $('.bg-parallax').parallax();
+    }
+    parallaxEffect();
+
     /*----------------------------------------------------*/
-   
-//	$('.courses_inner').imagesLoaded(function(){
-//        $('.courses_inner').isotope({ 
-//            layoutMode: 'masonry',
-//            percentPosition:true,
-//            masonry: {
-//                columnWidth: 1,
-//            }            
-//        })
-//    });
-	
-	
-	/*----------------------------------------------------*/
-    /*  Clients Slider
-    /*----------------------------------------------------*/
-//    function clients_slider(){
-//        if ( $('.clients_slider').length ){
-//            $('.clients_slider').owlCarousel({
-//                loop:true,
-//                margin: 30,
-//                items: 5,
-//                nav: false,
-//                autoplay: false,
-//                smartSpeed: 1500,
-//                dots:false, 
-//                responsiveClass: true,
-//                responsive: {
-//                    0: {
-//                        items: 1,
-//                    },
-//                    400: {
-//                        items: 2,
-//                    },
-//                    575: {
-//                        items: 3,
-//                    },
-//                    768: {
-//                        items: 4,
-//                    },
-//                    992: {
-//                        items: 5,
-//                    }
-//                }
-//            })
-//        }
-//    }
-//    clients_slider();
-	/*----------------------------------------------------*/
     /*  MailChimp Slider
     /*----------------------------------------------------*/
-    function mailChimp(){
+    function mailChimp() {
         $('#mc_embed_signup').find('form').ajaxChimp();
     }
     mailChimp();
-	
-	$('select').niceSelect();
-	
-	/*----------------------------------------------------*/
+
+    $('select').niceSelect();
+
+    /*----------------------------------------------------*/
     /*  Simple LightBox js
     /*----------------------------------------------------*/
     $('.imageGallery1 .light').simpleLightbox();
-	
-	$('.counter').counterUp({
-		delay: 10,
-		time: 1000
-	});
-	
-	
-	$(".skill_main").each(function() {
-        $(this).waypoint(function() {
+
+    $('.counter').counterUp({
+        delay: 10,
+        time: 1000
+    });
+
+
+    $(".skill_main").each(function () {
+        $(this).waypoint(function () {
             var progressBar = $(".progress-bar");
-            progressBar.each(function(indx){
+            progressBar.each(function (indx) {
                 $(this).css("width", $(this).attr("aria-valuenow") + "%")
             })
         }, {
             triggerOnce: true,
             offset: 'bottom-in-view'
-
         });
     });
-	
-	/*----------------------------------------------------*/
+
+    /*----------------------------------------------------*/
     /*  Isotope Fillter js
     /*----------------------------------------------------*/
-	function gallery_isotope(){
-        if ( $('.gallery_f_inner').length ){
+    function gallery_isotope() {
+        if ($('.gallery_f_inner').length) {
             // Activate isotope in container
-			$(".gallery_f_inner").imagesLoaded( function() {
+            $(".gallery_f_inner").imagesLoaded(function () {
                 $(".gallery_f_inner").isotope({
                     layoutMode: 'fitRows',
                     animationOptions: {
                         duration: 750,
                         easing: 'linear'
                     }
-                }); 
+                });
             });
-			
+
             // Add isotope click function
-            $(".gallery_filter li").on('click',function(){
+            $(".gallery_filter li").on('click', function () {
                 $(".gallery_filter li").removeClass("active");
                 $(this).addClass("active");
 
@@ -164,20 +99,42 @@
         }
     }
     gallery_isotope();
-	
-	/*----------------------------------------------------*/
+
+    function onLoadRepositories() {
+        fetch('https://api.github.com/users/LuisValgoi/repos')
+            .then(response => response.json())
+            .then(data => {
+                var content = `<div class="col-lg-4 col-md-4 col-sm-6 brand manipul design print">
+                <div class="h_gallery_item">
+                    <div class="g_img_item">
+                        <img class="img-fluid" src="img/gallery/project-1.jpg" alt="">
+                        <a class="light" href="img/gallery/project-1.jpg"><img
+                                src="img/gallery/icon.png" alt=""></a>
+                    </div>
+                    <div class="g_item_text">
+                        <h4>3D Helmet Design</h4>
+                        <p>Client Project</p>
+                    </div>
+                </div>
+            </div>`;
+                $(".gallery_f_inner.row.imageGallery1").html(content);
+            });
+    }
+    onLoadRepositories();
+
+    /*----------------------------------------------------*/
     /*  Testimonials Slider
     /*----------------------------------------------------*/
-    function testimonials_slider(){
-        if ( $('.testi_slider').length ){
+    function testimonials_slider() {
+        if ($('.testi_slider').length) {
             $('.testi_slider').owlCarousel({
-                loop:true,
+                loop: true,
                 margin: 30,
                 items: 3,
                 nav: false,
                 autoplay: true,
                 smartSpeed: 1500,
-                dots:true, 
+                dots: true,
                 responsiveClass: true,
                 responsive: {
                     0: {
@@ -191,24 +148,24 @@
         }
     }
     testimonials_slider();
-	
-	$(document).ready(function() {
-		$('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
-			disableOn: 700,
-			type: 'iframe',
-			mainClass: 'mfp-fade',
-			removalDelay: 160,
-			preloader: false,
 
-			fixedContentPos: false
-		});
-	}); 
-	
-	/*----------------------------------------------------*/
+    $(document).ready(function () {
+        $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+            disableOn: 700,
+            type: 'iframe',
+            mainClass: 'mfp-fade',
+            removalDelay: 160,
+            preloader: false,
+
+            fixedContentPos: false
+        });
+    });
+
+    /*----------------------------------------------------*/
     /*  Google map js
     /*----------------------------------------------------*/
-     
-    if ( $('#mapBox').length ){
+
+    if ($('#mapBox').length) {
         var $lat = $('#mapBox').data('lat');
         var $lon = $('#mapBox').data('lon');
         var $zoom = $('#mapBox').data('zoom');
@@ -217,16 +174,16 @@
         var $markerLat = $('#mapBox').data('mlat');
         var $markerLon = $('#mapBox').data('mlon');
         var map = new GMaps({
-        el: '#mapBox',
-        lat: $lat,
-        lng: $lon,
-        scrollwheel: false,
-        scaleControl: true,
-        streetViewControl: false,
-        panControl: true,
-        disableDoubleClickZoom: true,
-        mapTypeControl: false,
-        zoom: $zoom,
+            el: '#mapBox',
+            lat: $lat,
+            lng: $lon,
+            scrollwheel: false,
+            scaleControl: true,
+            streetViewControl: false,
+            panControl: true,
+            disableDoubleClickZoom: true,
+            mapTypeControl: false,
+            zoom: $zoom,
             styles: [
                 {
                     "featureType": "water",
@@ -414,6 +371,6 @@
             ]
         });
     }
-	
+
 
 })(jQuery)
